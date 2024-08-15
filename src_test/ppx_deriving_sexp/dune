@@ -1,9 +1,16 @@
+(env
+ (source
+  (flags
+   (:standard -warn-error -8-9-26-27-37-34-11-11-32-39  -annot  -verbose  -dsource ))))
+
 (executable
  (name test_ppx_deriving_sexp)
+ (libraries   ppxlib   	)
  (enabled_if
   (>= %{ocaml_version} "4.10.0"))
+
  (preprocess
-  (staged_pps ppx_import ppx_sexp_conv)))
+  (staged_pps ppx_import ppx_sexp_conv ppx_yojson_conv)))
 
 (rule
  (alias runtest)
