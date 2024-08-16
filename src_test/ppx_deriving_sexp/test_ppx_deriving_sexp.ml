@@ -3,16 +3,7 @@ open Ppx_yojson_conv_lib.Yojson_conv.Primitives
 (* [%%import: type loc = Ppxlib__.Import.loc [@@deriving  yojson]] *)
 
 let yojson_of_loc _ _  = yojson_of_string "FIXME"
-(* let yojson_of_location _  = yojson_of_string "FIXME" *)
 let yojson_of_longident_loc _ = yojson_of_string "FIXME"
-
-(* let yojson_of_payload _  = yojson_of_string "PAYLOAD" *)
-(* let yojson_of_expression _  = yojson_of_string "FIXME" *)
-(* let yojson_of_attributes _  = yojson_of_string "FIXME" *)
-(* let yojson_of_pattern _  = yojson_of_string "FIXME" *)
-(* let yojson_of_core_type _  = yojson_of_string "FIXME" *)
-
-(* type rec_flag_test = Ppxlib__.Import.rec_flag *)
 
 let yojson_of_open_infos _ _ = yojson_of_string "type_unsupported"
 let yojson_of_include_infos _ _ = yojson_of_string "type_unsupported"
